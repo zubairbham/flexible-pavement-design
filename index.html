@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Pavement Design - AASHTO Method</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header-bar">
+        <p>Copyrights 2022 &copy; Zubair Ahmed Bham</p>
+    </header>
+    <form onsubmit="return false">
+        <div id="general-input-box" class="input-conatiner">
+            <!-- Pavement Type -->
+            <select id="pavt-type" class="inp">
+                <option value="">--Select Pavement Type--</option>
+                <option value="flexible">Flexible</option>
+            </select>
+            <!-- Road Type -->
+            <select id="road-type" class="inp">
+                <option value="">--Select Road Type--</option>
+                <option value="urban">Urban</option>
+                <option value="rural">Rural</option>
+            </select>
+            <!-- Road Classification -->
+            <select id="road-class" class="inp">
+                <option value="">--Select Road Classification--</option>
+                <option value="freeway">Interstate or other freeway</option>
+                <option value="arterial">Arterial</option>
+                <option value="collector">Collector</option>
+                <option value="street">Residential Street</option>
+            </select>
+            <!-- Type of Carriageway -->
+            <select id="carriageway-type" class="inp">
+                <option value="">--Select Type of Carriageway--</option>
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+            </select>
+            <!-- Number of Lanes -->
+            <select id="number-of-lanes" class="inp">
+                <option value="">--Select Number of Lanes (each direction)--</option>
+                <option value="1">1 lane</option>
+                <option value="2">2 lanes</option>
+                <option value="3">3 lanes</option>
+                <option value="4">4 lanes or more</option>
+            </select>
+            <!-- Design Life -->
+            <select id="design-life" class="inp">
+                <option value="">--Select Design Life (Years)--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+            </select>
+            <button id="general-next-btn" class="inp">Next</button>
+        </div>
+    </form>
+    <form onsubmit="return false">
+        <div id="material-prop-box" class="input-container">
+            <!-- CBR -->
+            <input id="cbr-value-sg" class="inp" type="text" placeholder="CBR of Subgrade">
+            <select id="cbr-value-sb" class="inp">
+                <option value="">--Select CBR of Subbase Course--</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+            </select>
+            <select id="cbr-value-bs" class="inp">
+                <option value="">--Select CBR of Aggregate Base Course--</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+                <option value="60">60</option>
+                <option value="65">65</option>
+                <option value="70">70</option>
+                <option value="75">75</option>
+                <option value="80">80</option>
+                <option value="85">85</option>
+                <option value="90">90</option>
+            </select>
+            <!-- Elastic Modulus -->
+            <select id="modulus-ab" class="inp">
+                <option value="">--Select Elastic Modulus of Asphalt Base Course (Psi)--</option>
+                <option value="300000">300000</option>
+                <option value="310000">310000</option>
+                <option value="320000">320000</option>
+                <option value="330000">330000</option>
+                <option value="340000">340000</option>
+                <option value="350000">350000</option>
+                <option value="360000">360000</option>
+                <option value="370000">370000</option>
+                <option value="380000">380000</option>
+                <option value="390000">390000</option>
+                <option value="400000">400000</option>
+            </select>
+            <select id="modulus-aw" class="inp">
+                <option value="">--Select Elastic Modulus of Asphalt Wearing Course (Psi)--</option>
+                <option value="400000">400000</option>
+                <option value="410000">410000</option>
+                <option value="420000">420000</option>
+                <option value="430000">430000</option>
+                <option value="440000">440000</option>
+                <option value="450000">450000</option>
+                <option value="460000">460000</option>
+                <option value="470000">470000</option>
+                <option value="480000">480000</option>
+                <option value="490000">490000</option>
+                <option value="500000">500000</option>
+            </select>
+            <button id="material-next-btn" class="inp">Next</button>
+        </div>
+    </form>
+    <form onsubmit="return false">
+        <div id="traffic-box" class="input-container">
+            <!-- Vehicle Type -->
+            <select id="veh-type" class="inp">
+                <option value="">--Select a Vehicle--</option>
+                <option value="1.2">2 Axle Single (1.2)</option>
+                <option value="1.2-2">3 Axle Single (1.2-2)</option>
+                <option value="1.22">3 Axle Tandem (1.22)</option>
+                <option value="1.2-22">4 Axle Rear Tandem (1.2-22)</option>
+                <option value="1.22-22">5 Axle Tandem (1.22-22)</option>
+                <option value="1.22+222">6 Axle Tandem Tridem (1.22-222)</option>
+            </select>
+            <!-- AADT -->
+            <input id="aadt" class="inp" type="text" placeholder="AADT">
+            <!-- Growth Rate -->
+            <input id="growth-rate" class="inp" type="text" placeholder="Growth Rate">
+            <button id="add-btn" class="inp">Add</button>
+
+            <table id=myTable>
+                <thead>
+                    <tr>
+                        <th>Vehicle Code</td>
+                        <th>AADT</td>
+                        <th>Growth Rate</td>
+                        <th>ESAL</td>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Table row will be added through javascript -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Commulative ESALs</td>
+                        <td id="comm-esal">---</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </form>
+    <div id="calc-btn-box" class="input-container">
+        <button id="calculate-btn" class="inp">Calculate Layer Thicknesses</button>
+    </div>
+
+    <div id="result-box" class="result-container">
+        <button id="close-display">Close</button>
+        <div id="box1" class="box">Asphalt Wearing Course</div>
+        <div id="box2" class="box">Asphalt Base Course</div>
+        <div id="box3" class="box">Aggregate Base Course</div>
+        <div id="box4" class="box">Granular Subbase</div>
+        <div id="box5" class="box">Improved Subgrade</div>
+        <div id="box6" class="box">Natural Subgrade</div>
+    </div>
+
+
+    <script src="logic.js"></script>
+</body>
+
+</html>
